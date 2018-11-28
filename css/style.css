@@ -1,0 +1,131 @@
+.minecraft {
+    background-image: url("../images/bg.jpg");
+    background-size: contain;
+    background-repeat-x: no-repeat;
+    background-repeat-y: repeat;
+}
+.hotice {
+    background-color: #cccccc;
+    background-image: url("../images/hotice.jpg");
+    height: 250px;
+}
+.council {
+    background-color: #cccccc;
+    background-image: url("../images/council.jpg");
+    height: 250px;
+}
+.main {
+    background-color: white;
+    min-height: 1000px;
+}
+.outline {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.activeDay {
+    background-color: #d4edda;
+}
+[data-toggle="collapse"]:after {
+    transform: rotate(180deg);
+    transition: all linear 0.25s;
+}
+[data-toggle="collapse"].collapsed:after {
+    transform: rotate(0deg);
+}
+.error {
+    color: #FF0000;
+    font-size: 24px;
+    margin-top: 5px;
+}
+.success {
+    color: #28A745;
+    font-size: 24px;
+    margin-top: 5px;
+}
+.answerprogress {
+    height: 35px;
+}
+.btn-primary.disabled, .btn-primary:disabled {
+    border-color: #6C757D;
+    background-color: #6C757D;
+    cursor: not-allowed;
+}
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.col-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.copyToken {
+    color: black;
+}
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+.council {
+    position: relative;
+}
+.council p {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+}
