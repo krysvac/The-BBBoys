@@ -183,43 +183,6 @@ function convertDay($day)
     return $daysSwe[$day];
 }
 
-function getTimeoutItems()
-{
-    $days = array(
-        "monday"    => "<p><strong>Måndag",
-        "tuesday"   => "<p><strong>Tisdag",
-        "wednesday" => "<p><strong>Onsdag",
-        "thursday"  => "<p><strong>Torsdag",
-        "friday"    => "<p><strong>Fredag");
-
-    $daysEndings = array(
-        "monday"    => "</strong>",
-        "tuesday"   => "</strong>",
-        "wednesday" => "<br />",
-        "thursday"  => "<br />",
-        "friday"    => "<br />");
-
-    $website_url = "http://www.timeoutlyckeby.se/dagens-ratt/";
-    $curl        = curl_init();
-    curl_setopt($curl, CURLOPT_URL, $website_url);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-    $html = curl_exec($curl);
-    curl_close($curl);
-
-    $items = new stdClass();
-
-    foreach ($days as $key => $value) {
-        $start       = strpos($html, $value);
-        $end         = strpos($html, '</p>', $start);
-        $length      = $end - $start;
-        $items->$key = substr($html, $start, $length);
-        $items->$key = strstr($items->$key, $daysEndings[$key]);
-        $items->$key = substr($items->$key, strlen($daysEndings[$key]));
-    }
-
-    return $items;
-}
-
 function getBistroJItems()
 {
     $days = array(

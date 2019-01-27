@@ -68,39 +68,14 @@ $csrf = new csrf();
                                 <h1 style="margin-top: 30px;">Maten för veckan, Vecka <?php echo date("W"); ?></h1>
                                 <ul class="nav nav-tabs" id="foodTabs" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" id="timeout-tab" data-toggle="tab" href="#timeout" role="tab" aria-controls="timeout" aria-selected="true">Timeout</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="villa-tab" data-toggle="tab" href="#villa" role="tab" aria-controls="villa" aria-selected="false">Villa Oscar</a>
+                                        <a class="nav-link active" id="villa-tab" data-toggle="tab" href="#villa" role="tab" aria-controls="villa" aria-selected="true">Villa Oscar</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" id="bistroj-tab" data-toggle="tab" href="#bistroj" role="tab" aria-controls="bistroj" aria-selected="false">Bistro J</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content" id="foodTabsContent">
-                                    <div class="tab-pane fade show active" id="timeout" role="tabpanel" aria-labelledby="timeout-tab">
-                                        <table class="table table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">Dag</th>
-                                                    <th scope="col">Maträtt</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php
-                                                foreach (getTimeoutItems() as $key => $value) {
-                                                ?>
-                                                    <tr class="<?php echo currentDayClass($key); ?>">
-                                                        <td><?php echo convertDay($key) ?></td>
-                                                        <td><?php echo $value ?></td>
-                                                    </tr>
-                                            <?php
-                                            }
-                                            ?>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="tab-pane fade" id="villa" role="tabpanel" aria-labelledby="villa-tab">
+                                    <div class="tab-pane fade show active" id="villa" role="tabpanel" aria-labelledby="villa-tab">
                                         <table class="table table-hover">
                                             <thead>
                                                 <tr class="justify-content-start">
